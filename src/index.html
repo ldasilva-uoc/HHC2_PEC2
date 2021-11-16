@@ -7,20 +7,68 @@
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
     <title>UOC Boilerplate</title>
   </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="test image" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+  <body class="body portada">
+    <header id="header" class="header portada__header">
+
+      <nav class="navbar fixed-top navbar-expand-lg  navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="./assets/images/logo_red.png" alt="logo"  class="d-inline-block align-text-top"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Portada</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Reparto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Historia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Videos & fotos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+  
+
+
+
+    </header>
+
+    <main class="main portada__main">
+
+      <div class="container portada_container">
+        <p class="titulo portada_titulo1 portada__grid_item1">El Huérfano de los</p>
+        <diV class= "portada_imagen portada__grid_item2">
+          <picture>
+            <source media="(max-width: 768px)" srcset="./assets/images/letras_chinas_s.png">
+            <source media="(min-width: 769px)" srcset="./assets/images/letras_chinas_l.png">
+            <img src="./assets/images/letras_chinas_l.png" alt="Letras chinas">
+          </picture>
+        </diV>
+        <p class= "portada_titulo2 portada__grid_item3">Zhao</p>
+        <div class= "portada_premisa portada__grid_item4">
+          <p class= "portada_texto"> 
+            Una historia legendaria que nos remite a un mundo antiguo 
+            de venganzas y traiciones entre clanes. Un ejemplo de la 
+            literatura china universal.
+          </p>
+        </div>
+        <div class="portada_teatro portada__grid_item5">
+            <img src="./assets/images/logo tetro.png" alt="Logo del teatro Olimpia">
+        </div>
+      </div>
+    </main>
+    <footer class="footer portada__footer">
+
+    </footer>
+
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
 </html>
