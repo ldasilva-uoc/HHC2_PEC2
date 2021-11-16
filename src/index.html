@@ -5,14 +5,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
     <title>UOC Boilerplate</title>
   </head>
   <body class="body portada">
     <header id="header" class="header portada__header">
-
       <nav class="navbar fixed-top navbar-expand-lg  navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img src="./assets/images/logo_red.png" alt="logo"  class="d-inline-block align-text-top"></a>
+          <a class="navbar-brand" href="#">
+            <img src="./assets/images/logo_red.png" alt="" class="d-inline-block align-text-top logo">
+          </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -35,33 +42,30 @@
         </div>
       </nav>
 
-  
-
-
 
     </header>
 
     <main class="main portada__main">
 
-      <div class="container portada_container">
-        <p class="titulo portada_titulo1 portada__grid_item1">El Huérfano de los</p>
-        <diV class= "portada_imagen portada__grid_item2">
-          <picture>
+      <div class="portada_container">
+        <p class="titulo portada_titulo1 portada__grid_item2">El Huérfano de los</p>
+        <div class= "portada_imagen portada__grid_item3">
+          <picture class="imagen_letras">
             <source media="(max-width: 768px)" srcset="./assets/images/letras_chinas_s.png">
             <source media="(min-width: 769px)" srcset="./assets/images/letras_chinas_l.png">
-            <img src="./assets/images/letras_chinas_l.png" alt="Letras chinas">
+            <img   src="./assets/images/letras_chinas_l.png" alt="Letras chinas">
           </picture>
-        </diV>
-        <p class= "portada_titulo2 portada__grid_item3">Zhao</p>
-        <div class= "portada_premisa portada__grid_item4">
+        </div>
+        <p class= "portada_titulo2 portada__grid_item4">Zhao</p>
+        <div class= "portada_premisa portada__grid_item5">
           <p class= "portada_texto"> 
             Una historia legendaria que nos remite a un mundo antiguo 
             de venganzas y traiciones entre clanes. Un ejemplo de la 
             literatura china universal.
           </p>
         </div>
-        <div class="portada_teatro portada__grid_item5">
-            <img src="./assets/images/logo tetro.png" alt="Logo del teatro Olimpia">
+        <div class="portada_teatro portada__grid_item6">
+            <img src="./assets/images/logo tetro.png" alt="Logo del teatro Olimpia" class="imagen_teatro">
         </div>
       </div>
     </main>

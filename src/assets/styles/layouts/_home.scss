@@ -1,21 +1,168 @@
 * {
   box-sizing: border-box;
+  font-size: 16px;
 }
 
-.portada_container {
-  margin: 0 !important;
-  padding: 0 !important ;
-  background-color: aqua;
+.titulo {
+  width: 100%;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-family: $font-family-sans-serif;
+  font-size: 9vh;
+  color: $primary-color;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
+
+p {
+  margin: 0 !important;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  background-color: $secondary-color;
+}
+
+/*------------------------------------*\
+  #NAV
+\*------------------------------------*/
+
 .navbar-collapse {
   justify-content: right;
 }
 
-header .navbar {
-  background-color: transparent !important;
-}
-@media (min-width: $mqMinWidth) {
+.navbar-brand {
+  width: 50px;
 }
 
-@media (min-width: $mqMinWidth) {
+.container-fluid {
+  justify-content: flex-end;
+}
+
+.logo {
+  width: 100%;
+}
+
+/*------------------------------------*\
+  #PORTADA
+\*------------------------------------*/
+.portada__main {
+  height: 100vh;
+  width: 100%;
+}
+.portada_container {
+  width: 90%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: 4% 2% 40% 2% 42% 10%;
+  grid-template-rows: 10% 3% 33% 20% 23% 11%;
+}
+.portada__grid_item1 {
+  grid-area: 1 / 1 / 1 / 1;
+}
+.portada__grid_item2 {
+  grid-area: 3 / 1 / 7 / 1;
+}
+.portada__grid_item3 {
+  grid-area: 1 / 3 / 7 / 3;
+}
+.portada__grid_item4 {
+  grid-area: 5 / 3 / 7 / 3;
+}
+.portada__grid_item5 {
+  grid-area: 4 / 5 / 4 / 7;
+}
+.portada__grid_item6 {
+  grid-area: 6/ 6 / 6 /6;
+}
+
+.portada_imagen {
+  background-color: $primary-color;
+}
+
+.imagen_letras {
+  img {
+    width: 100%;
+  }
+}
+.imagen_teatro {
+  width: 100%;
+}
+
+.portada_titulo2 {
+  font-family: $font-family-serif;
+  color: $secondary-color;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  font-size: 11vw;
+}
+.portada_premisa {
+  border-left: 6px solid $primary-color;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  padding-left: 3%;
+}
+
+@media (max-width: $maxMinWidth) {
+  * {
+    font-size: 12px;
+  }
+
+  .titulo {
+    font-size: 7vh;
+    color: $secondary-color;
+  }
+  /*------------------------------------*\
+  #PORTADA
+\*------------------------------------*/
+
+  .portada_container {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 6% 10% 68% 10% 6%;
+    grid-template-rows: 7% 4% 39% 10% 20% 20%;
+  }
+
+  .portada__grid_item2 {
+    grid-area: 3 / 2 / 6 / 2;
+  }
+  .portada__grid_item3 {
+    grid-area: 1 / 1 / 8 / 6;
+  }
+  .portada__grid_item4 {
+    grid-area: 6 / 3 / 6 / 3;
+  }
+  .portada__grid_item5 {
+    grid-area: 5 / 3 / 5 / 3;
+  }
+  .portada__grid_item6 {
+    grid-area: 4/ 3 / 4/ 3;
+  }
+
+  .portada_titulo2 {
+    color: $secondary-color;
+    align-items: center;
+    width: 100%;
+    font-size: 7rem;
+  }
+  .portada_premisa {
+    border-left: 3px solid $secondary-color;
+    color: $secondary-color;
+  }
+
+  .portada_teatro {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imagen_teatro {
+    width: 30%;
+  }
 }
