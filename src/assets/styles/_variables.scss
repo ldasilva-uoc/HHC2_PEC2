@@ -2,18 +2,25 @@
 
 $font-family-sans-serif: "Secular One", sans-serif;
 $font-family-serif: "Merienda One", cursive;
+$font-family-base: "Segoe UI";
 
 $primary-color: #e73433;
 $secondary-color: #f4f4f4;
 
-$maxMinWidth: 768px;
+$theme-colors: (
+  "primary": $primary-color,
+  "secondary": $secondary-color,
+);
+
+$MaxWidthS: 768px;
+$MaxWidthM: 991px;
+$MaxWidthXS: 576px;
 
 $navbar-light-hover-color: $primary-color;
 $navbar-light-active-color: $primary-color;
 $navbar-light-toggler-border-color: none;
-$navbar-padding-y: 0px;
-$navbar-padding-x: 4.5%;
+$navbar-padding-y: 4.5px;
+$navbar-padding-x: 4px;
 
-@media (max-width: $maxMinWidth) {
-  $navbar-padding-x: 10%;
-}
+$card-bg: none;
+$card-border-width: 0px;

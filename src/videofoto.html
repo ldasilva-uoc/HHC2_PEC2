@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+    <title>Videos & fotos</title>
+  </head>
+  <body class="body fotos">
+    <header id="header" class="header portada__header">
+      <nav class="navbar  navbar-expand-lg  navbar-light">
+        <div class="container-fluid">
+          <div style="width: 20px;">
+
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link"  href="./index.html">Portada</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./reparto.html">Reparto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./historia.html">Historia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./videofoto.html">Videos & fotos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    </header>
+
+    <main class="main fotos__main">
+
+      <div class="container__main fotos__container">
+        <img src="./assets/images/logo_red.png" alt="" class="d-inline-block align-text-top imagen_logo logo container__grid__item1">
+        <p class="titulo fotos__titulo container__grid__item2 text-primary">Videos & fotos</p>
+        <div class="inner fotos__inner container__grid__item3">
+            <div class="fotos_teatro">
+                <img src="./assets/images/obra_videofotos_l.jpeg" class="fotos_imagen">
+                <p class="foto__texto">El Huérfano de los Zhao</p>
+            </div>
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <iframe  src="https://www.youtube.com/embed/ZyvCGwbDDZ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <div class="carousel-item">
+                    <iframe  src="https://www.youtube.com/embed/TOUsQ_0nKrQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                  <div class="carousel-item">
+                    <iframe  src="https://www.youtube.com/embed/DYaIrVLlEXI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+
+           
+
+      </div>
+    </main>
+
+
+    <footer class="footer fotos__footer">
+        <div class="footer__content">
+            <div class="footer__imagen">
+              <img src="./assets/images/logo_white.png" class="footer__logo">
+            </div>
+            <div class="footer_info">
+              <div class="footer__menu">
+                <ul>
+                  <li><a href="./index.html">Portada</a> </li>
+                  <li><a href="./reparto.html">Reparto</a></li>
+                  <li><a href="./historia.html">Historia</a></li>
+                  <li><a href="./videofoto.html">Videos & fotos</a></li>
+                </ul>
+              </div>
+    
+              <div class="footer__rrss">
+                <a><img src="./assets/images/youtube_icon.png"></a>
+                <a><img src="./assets/images/face_icon.png"></a>
+                <a><img src="./assets/images/insta_icon.png"></a>
+                
+              </div>
+            </div>
+            
+          </div>
+    </footer>
+
+    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+  </body>
+</html>

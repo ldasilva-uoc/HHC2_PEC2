@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
   font-size: 16px;
+  font-family: $font-family-base;
+}
+
+p {
+  margin: 0 !important;
 }
 
 .titulo {
@@ -8,26 +13,39 @@
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   font-family: $font-family-sans-serif;
-  font-size: 9vh;
-  color: $primary-color;
+  font-size: 3.5rem;
   display: flex;
-  justify-content: start;
+  justify-content: end;
   align-items: center;
 }
 
-p {
-  margin: 0 !important;
+.body {
+  background-color: $secondary-color;
 }
 
-main {
+.main {
   display: flex;
   justify-content: center;
-  background-color: $secondary-color;
+  width: 100%;
+}
+
+.imagen_logo {
+  width: 100%;
 }
 
 /*------------------------------------*\
   #NAV
 \*------------------------------------*/
+
+.header {
+  position: absolute;
+  width: 100%;
+  right: 0;
+  z-index: 3;
+}
+.navbar {
+  background-color: transparent;
+}
 
 .navbar-collapse {
   justify-content: right;
@@ -41,23 +59,18 @@ main {
   justify-content: flex-end;
 }
 
-.logo {
-  width: 100%;
-}
-
 /*------------------------------------*\
   #PORTADA
 \*------------------------------------*/
 .portada__main {
   height: 100vh;
-  width: 100%;
 }
+
 .portada_container {
   width: 90%;
   height: 100%;
-
   display: grid;
-  grid-template-columns: 4% 2% 40% 2% 42% 10%;
+  grid-template-columns: 40px 2% 40% 2% 42% 10%;
   grid-template-rows: 10% 3% 33% 20% 23% 11%;
 }
 .portada__grid_item1 {
@@ -94,7 +107,6 @@ main {
 
 .portada_titulo2 {
   font-family: $font-family-serif;
-  color: $secondary-color;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -109,51 +121,571 @@ main {
   padding-left: 3%;
 }
 
-@media (max-width: $maxMinWidth) {
-  * {
-    font-size: 12px;
+/*------------------------------------*\
+  #REPARTO #HISTORIA #VIDEOS & FOTOS
+\*------------------------------------*/
+
+.container__main {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 40px 10px 1fr;
+  grid-template-rows: 50px 10px 1fr;
+}
+
+.container__grid__item1 {
+  grid-area: 1 / 1 / 1 / 1;
+}
+.container__grid__item2 {
+  grid-area: 3 / 1 / 4 / 1;
+}
+.container__grid__item3 {
+  grid-area: 3 / 3 / 4 / 4;
+}
+
+.inner {
+  width: 75%;
+  justify-self: center;
+}
+
+/*------------------------------------*\
+  #REPARTO
+\*------------------------------------*/
+
+.reparto__inner {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 10px;
+  row-gap: 20px;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+}
+
+/*------------------------------------*\
+  #HISTORIA
+\*------------------------------------*/
+
+.historia__inner {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  //grid-template-rows: repeat(7, 1fr);
+}
+
+.historia_text_sipnopsis,
+.historia_text_tecnica {
+  text-align: justify;
+  align-self: center;
+}
+
+.historia__grid__item1 {
+  grid-area: 1 / 1 / 1 / 3;
+}
+
+.historia__grid__item2 {
+  grid-area: 2 / 1 / 2 / 3;
+}
+
+.historia__grid__item3 {
+  grid-area: 3 / 1 / 3 / 1;
+}
+.historia__grid__item4 {
+  grid-area: 3 / 2 / 3 / 3;
+}
+
+.historia__grid__item5 {
+  grid-area: 4 / 1 / 4 / 3;
+}
+
+.historia__grid__item6 {
+  grid-area: 5 / 1 / 5 / 1;
+}
+
+.historia__grid__item7 {
+  grid-area: 5 / 2 / 5 / 3;
+}
+
+.historia__grid__item8 {
+  grid-area: 6 / 1 / 6 / 3;
+}
+
+.historia__grid__item9 {
+  grid-area: 7 / 1 / 8 / 3;
+}
+
+.imagen__teatro,
+.imagen__ilustracion {
+  width: 100%;
+}
+
+.historia__imagen__teatro,
+.historia__imagen__ilustracion {
+  display: flex;
+  align-items: center;
+}
+
+.historia__separador--rojo {
+  border-top: 10px solid $primary-color;
+  border-bottom: 10px solid $primary-color;
+}
+
+h4 {
+  padding-bottom: 5%;
+  justify-self: center;
+  font-family: $font-family-sans-serif;
+}
+
+.historia_text_sipnopsis {
+  padding-top: 4%;
+  padding-bottom: 4%;
+}
+
+.historia_text_tecnica {
+  padding-left: 4%;
+}
+
+.historia__text__music {
+  font-size: 3rem;
+  color: $secondary-color;
+  background-color: $primary-color;
+  line-height: 50px;
+  font-family: $font-family-sans-serif;
+  word-spacing: 100vw;
+}
+.historia__ficha {
+  display: flex;
+  align-items: center;
+}
+
+.ficha_titulo {
+  writing-mode: vertical-lr;
+  color: $secondary-color;
+  background-color: $primary-color;
+  transform: rotate(180deg);
+  font-family: $font-family-sans-serif;
+  font-size: 2.18rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.ficha_content {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  ul {
+    list-style: none;
+    padding-right: 2%;
+    padding-left: 3%;
+
+    li {
+      display: flex;
+      justify-content: space-between;
+
+      padding-top: 4%;
+      padding-bottom: 4%;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+
+    li > p:first-child {
+      font-weight: bold;
+    }
+  }
+}
+
+.hitoria_button {
+  display: flex;
+  justify-content: center;
+  padding-top: 6%;
+  padding-bottom: 6%;
+}
+
+.historia__quote {
+  font-family: $font-family-sans-serif;
+  color: $secondary-color;
+
+  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+
+  padding-top: 6%;
+  padding-bottom: 6%;
+
+  q {
+    font-size: 3rem;
+  }
+  q:before {
+    content: open-quote;
+    font-weight: bold;
+    font-size: 6rem;
+  }
+  q:after {
+    content: close-quote;
+    font-weight: bold;
+    font-size: 6rem;
+  }
+}
+
+/*------------------------------------*\
+  VIDEOS & FOTOS
+\*------------------------------------*/
+
+.carousel {
+  iframe {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+.fotos_teatro {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 6%;
+}
+
+.foto__texto {
+  position: absolute;
+  color: $secondary-color;
+  top: 0;
+  font-size: 5rem;
+  line-height: 80px;
+  font-family: $font-family-sans-serif;
+}
+
+.fotos_imagen {
+  width: 100%;
+}
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+.footer {
+  background-color: $primary-color;
+  margin-top: 15%;
+  display: flex;
+  justify-content: center;
+  color: $secondary-color;
+}
+
+.footer__content {
+  padding-top: 8%;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+}
+
+.footer__imagen {
+  align-self: flex-end;
+}
+.footer_info {
+  width: 40%;
+  justify-self: center;
+  padding-bottom: 3%;
+}
+.footer__menu {
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      text-decoration: none;
+      color: $secondary-color;
+      padding-bottom: 2px;
+    }
+
+    a:hover {
+      border-bottom: 3px solid $secondary-color;
+      color: $secondary-color;
+    }
+  }
+}
+
+.footer__logo {
+  width: 100%;
+}
+
+.footer__rrss {
+  display: flex;
+  justify-content: center;
+  a {
+    margin: 2%;
+    width: 10%;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+@media (max-width: $MaxWidthM) {
+  .portada_titulo2 {
+    font-size: 9rem;
+  }
+  /*------------------------------------*\
+  #NAV
+\*------------------------------------*/
+
+  .navbar-light {
+    background-color: $secondary-color;
   }
 
-  .titulo {
-    font-size: 7vh;
-    color: $secondary-color;
-  }
   /*------------------------------------*\
   #PORTADA
 \*------------------------------------*/
 
   .portada_container {
-    width: 100%;
-    height: 100%;
-    grid-template-columns: 6% 10% 68% 10% 6%;
-    grid-template-rows: 7% 4% 39% 10% 20% 20%;
+    grid-template-columns: 40px 2% 50% 2% 32% 10%;
+    grid-template-rows: 7% 10% 2% 35% 20% 20% 10%;
   }
 
+  .portada__grid_item1 {
+    grid-area: 2 / 1 / 2 / 1;
+  }
   .portada__grid_item2 {
-    grid-area: 3 / 2 / 6 / 2;
+    grid-area: 4 / 1 / 8 / 1;
   }
   .portada__grid_item3 {
-    grid-area: 1 / 1 / 8 / 6;
+    grid-area: 2 / 3 / 8 / 3;
   }
   .portada__grid_item4 {
-    grid-area: 6 / 3 / 6 / 3;
+    grid-area: 5 / 3 / 8 / 3;
   }
   .portada__grid_item5 {
-    grid-area: 5 / 3 / 5 / 3;
+    grid-area: 5 / 5 / 5 / 7;
   }
   .portada__grid_item6 {
-    grid-area: 4/ 3 / 4/ 3;
+    grid-area: 7/ 6 / 7 /6;
+  }
+
+  /*------------------------------------*\
+  #REPARTO #HISTORIA #VIDEOS & FOTOS
+\*------------------------------------*/
+
+  .container__main {
+    grid-template-columns: 40px 10px 1fr;
+    grid-template-rows: 50px 50px 10px 1fr;
+  }
+
+  .container__grid__item1 {
+    grid-area: 2 / 1 / 2 / 1;
+  }
+  .container__grid__item2 {
+    grid-area: 4 / 1 / 5 / 1;
+  }
+  .container__grid__item3 {
+    grid-area: 4 / 3 / 5 / 4;
+  }
+
+  /*------------------------------------*\
+  #REPARTO
+\*------------------------------------*/
+
+  .reparto__lista {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+
+  /*------------------------------------*\
+  #HISTORIA
+\*------------------------------------*/
+
+  .historia__inner {
+    grid-template-columns: 100%;
+    //grid-template-rows: repeat(7, 1fr);
+  }
+
+  .historia_text_tecnica {
+    padding-left: 0%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+  }
+
+  .historia__grid__item1 {
+    grid-area: 1 / 1 / 1 / 2;
+  }
+
+  .historia__grid__item2 {
+    grid-area: 2 / 1 / 2 / 2;
+  }
+
+  .historia__grid__item3 {
+    grid-area: 3 / 1 / 3 / 2;
+  }
+  .historia__grid__item4 {
+    grid-area: 4 / 1 / 4 / 2;
+  }
+
+  .historia__grid__item5 {
+    grid-area: 5 / 1 / 5 / 2;
+  }
+
+  .historia__grid__item6 {
+    grid-area: 6 / 1 / 6 / 2;
+  }
+
+  .historia__grid__item7 {
+    grid-area: 7 / 1 / 7 / 2;
+  }
+
+  .historia__grid__item8 {
+    grid-area: 8 / 1 / 8 / 2;
+  }
+
+  .historia__grid__item9 {
+    grid-area: 9/ 1 / 10 / 2;
+  }
+
+  .historia__quote {
+    q {
+      font-size: 2rem;
+      text-align: center;
+    }
+    q:before {
+      content: open-quote;
+      font-weight: bold;
+      font-size: 3rem;
+    }
+    q:after {
+      content: close-quote;
+      font-weight: bold;
+      font-size: 3rem;
+    }
+  }
+
+  /*------------------------------------*\
+  VIDEOS & FOTOS
+\*------------------------------------*/
+
+  .carousel {
+    iframe {
+      height: 300px;
+    }
+  }
+
+  .foto__texto {
+    font-size: 3rem;
+    line-height: 50px;
+  }
+
+  /*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+  .footer_info {
+    width: 60%;
+  }
+}
+
+@media (max-width: $MaxWidthS) {
+  .titulo {
+    font-size: 2.5rem;
+  }
+
+  /*------------------------------------*\
+  #PORTADA
+\*------------------------------------*/
+
+  .portada_container {
+    grid-template-rows: 40px 5% 2% 33% 21% 20% 10%;
   }
 
   .portada_titulo2 {
-    color: $secondary-color;
-    align-items: center;
+    font-size: 6rem;
+  }
+  /*------------------------------------*\
+  #REPARTO #HISTORIA #VIDEOS & FOTOS
+\*------------------------------------*/
+  .inner {
     width: 100%;
+  }
+
+  /*------------------------------------*\
+  VIDEOS & FOTOS
+\*------------------------------------*/
+
+  .foto__texto {
+    line-height: 45px;
+  }
+
+  /*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+  .footer {
+    margin-top: 40%;
+  }
+  .footer__menu {
+    ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: $MaxWidthXS) {
+  * {
+    box-sizing: border-box;
+    font-size: 12px;
+  }
+  /*------------------------------------*\
+  #PORTADA
+\*------------------------------------*/
+
+  .header {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    z-index: 3;
+  }
+  .portada_container {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 40px 8% 3% 79% 5%;
+    grid-template-rows: 8% 8% 2% 35% 8% 18% 1% 20%;
+  }
+
+  .portada__grid_item1 {
+    grid-area: 2 / 2 / 2 / 2;
+  }
+
+  .portada__grid_item2 {
+    grid-area: 4 / 2 / 9 / 2;
+  }
+  .portada__grid_item3 {
+    grid-area: 2 / 4 / 9 / 6;
+  }
+  .portada__grid_item4 {
+    grid-area: 8 / 4 / 9 / 4;
+  }
+  .portada__grid_item5 {
+    grid-area: 6 / 4 / 6 / 4;
+  }
+  .portada__grid_item6 {
+    grid-area: 5/ 4 / 5/ 4;
+  }
+
+  .portada_titulo2 {
     font-size: 7rem;
   }
+
   .portada_premisa {
     border-left: 3px solid $secondary-color;
     color: $secondary-color;
+    margin-left: 3%;
   }
 
   .portada_teatro {
@@ -164,5 +696,17 @@ main {
 
   .imagen_teatro {
     width: 30%;
+  }
+
+  /*------------------------------------*\
+  VIDEOS & FOTOS
+\*------------------------------------*/
+  .carousel {
+    iframe {
+      height: 250px;
+    }
+  }
+  .foto__texto {
+    line-height: 35px;
   }
 }

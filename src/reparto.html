@@ -11,11 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
-    <title>El húerfano de los Zhao</title>
+    <title>Reparto</title>
   </head>
-  <body class="body portada">
+  <body class="body reparto">
     <header id="header" class="header portada__header">
-      <nav class="navbar  navbar-expand-lg  navbar-light">
+      <nav class="navbar navbar-expand-lg  navbar-light">
         <div class="container-fluid">
           <div style="width: 20px;">
 
@@ -26,10 +26,10 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./portada">Portada</a>
+                <a class="nav-link"  href="./index.html">Portada</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./reparto.html">Reparto</a>
+                <a class="nav-link active" aria-current="page" href="./reparto.html">Reparto</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./historia.html">Historia</a>
@@ -45,34 +45,62 @@
 
     </header>
 
-    <main class="main portada__main">
+    <main class="main reparto__main">
 
-      <div class="portada_container">
-        <img src="./assets/images/logo_red.png" alt="" class="d-inline-block align-text-top imagen_logo logo portada__grid_item1">
-        <p class="titulo portada_titulo1 portada__grid_item2 text-primary">El Huérfano de los</p>
+      <div class="container__main reparto__container">
+        <img src="./assets/images/logo_red.png" alt="" class="d-inline-block align-text-top imagen_logo logo container__grid__item1">
+        <p class="titulo reparto__titulo container__grid__item2 text-primary">Reparto</p>
+        <div class="inner reparto__inner container__grid__item3">
+            <div class="card" style="width: 15rem;">
+                <img src="./assets/images/Julio Manrique.jpg" class="card-img-top" alt="Julio Manrique">
+                <div class="card-body">
+                  <h5 class="card-title text-primary">Julio Manrique</h5>
+               </div>
+            </div>
 
-        <div class= "portada_imagen portada__grid_item3">
-          <picture class="imagen_letras">
-            <source media="(max-width: 768px)" srcset="./assets/images/letras_chinas_s.png">
-            <source media="(min-width: 769px)" srcset="./assets/images/letras_chinas_l.png">
-            <img   src="./assets/images/letras_chinas_l.png" alt="Letras chinas">
-          </picture>
+            <div class="card" style="width: 15rem;">
+                <img src="./assets/images/Marta Marco.jpg" class="card-img-top" alt="Marta Marco">
+                <div class="card-body">
+                  <h5 class="card-title text-primary">Marta Marco</h5>
+               </div>
+            </div>
+
+            <div class="card" style="width: 15rem;">
+                <img src="./assets/images/Borja Espinosa.jpg" class="card-img-top" alt="Borja Espinosa">
+                <div class="card-body">
+                  <h5 class="card-title text-primary">Borja Espinosa</h5>
+               </div>
+            </div>
+
+            <div class="card" style="width: 15rem;">
+                <img src="./assets/images/Lluís Marco.jpg" class="card-img-top" alt="Lluís Marco">
+                <div class="card-body">
+                  <h5 class="card-title text-primary">Lluís Marco</h5>
+               </div>
+            </div>
+
+            <div class="card" style="width: 15rem;">
+                <img src="./assets/images/Ernest Villegas.jpg" class="card-img-top" alt="Ernest Villegas">
+                <div class="card-body">
+                  <h5 class="card-title text-primary">Ernest Villegas</h5>
+               </div>
+            </div>
+
+            <div class="card" style="width: 15rem;">
+                <img src="./assets/images/Pablo Derqui.jpg" class="card-img-top" alt="Pablo Derqui">
+                <div class="card-body">
+                  <h5 class="card-title text-primary">Pablo Derqui</h5>
+               </div>
+            </div>
         </div>
-        <p class= "portada_titulo2 portada__grid_item4 text-secondary">Zhao</p>
-        <div class= "portada_premisa portada__grid_item5">
-          <p class= "portada_texto"> 
-            Una historia legendaria que nos remite a un mundo antiguo 
-            de venganzas y traiciones entre clanes. Un ejemplo de la 
-            literatura china universal.
-          </p>
-        </div>
-        <div class="portada_teatro portada__grid_item6">
-            <img src="./assets/images/logo tetro.png" alt="Logo del teatro Olimpia" class="imagen_teatro">
-        </div>
+
+           
+
       </div>
     </main>
-    <footer class="footer portada__footer">
 
+
+    <footer class="footer reparto__footer">
       <div class="footer__content">
         <div class="footer__imagen">
           <img src="./assets/images/logo_white.png" class="footer__logo">
@@ -96,7 +124,6 @@
         </div>
         
       </div>
-
     </footer>
 
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
