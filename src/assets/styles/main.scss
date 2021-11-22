@@ -29,6 +29,8 @@
  * Do NOT include anything else in this file!
  */
 
-@import "/node_modules/aos/dist/aos.css";
-
 @import "/node_modules/bootstrap/scss/bootstrap.scss";
+
+@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+
+@import "../../../node_modules/aos/dist/aos.css";

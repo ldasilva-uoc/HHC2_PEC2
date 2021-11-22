@@ -3,13 +3,9 @@
  * see commented examples below
  */
 
- import * as bootstrap from 'bootstrap';
-import "/node_modules/aos/dist/aos.js";
-// import 'some-node-module';
-// import SomeModule from 'some-node-module';
-/**
- * Write any other JavaScript below
- */
+import * as bootstrap from 'bootstrap';
+import AOS from 'aos';
 
-
-
+AOS.init({
+    duration: 1200
+});
