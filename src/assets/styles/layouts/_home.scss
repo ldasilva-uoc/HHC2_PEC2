@@ -715,7 +715,7 @@ h4 {
   }
   @supports (display: grid) {
     .portada__container {
-      grid-template-columns: 40px_ 2% 1fr;
+      grid-template-columns: 40px 2% 1fr;
       grid-template-rows: 8% 8% 2% 35% 8% 18% 1% 20%;
     }
 
