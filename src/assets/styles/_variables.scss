@@ -24,3 +24,8 @@ $navbar-padding-x: 4px;
 
 $card-bg: none;
 $card-border-width: 0px;
+
+@mixin Hcenter() {
+  display: flex;
+  justify-content: center;
+}

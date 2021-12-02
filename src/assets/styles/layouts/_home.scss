@@ -1,3 +1,7 @@
+/*------------------------------------*\
+  #ALL
+\*------------------------------------*/
+
 * {
   box-sizing: border-box;
   font-size: 16px;
@@ -7,21 +11,42 @@
 p {
   margin: 0 !important;
 }
-/*
-*/
 
 .body {
   background-color: $secondary-color;
 }
 
 .main {
-  display: flex;
-  justify-content: center;
+  @include Hcenter;
   width: 100%;
 }
 
-.imagen__logo {
-  width: 100%;
+/*------------------------------------*\
+  #REPARTO #HISTORIA #VIDEOS & FOTOS
+\*------------------------------------*/
+
+.container__main {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 40px 10px 1fr;
+  grid-template-rows: 50px 10px 1fr;
+}
+
+.container__grid-item1 {
+  grid-area: 1 / 1 / 1 / 1;
+}
+
+.container__grid-item2 {
+  grid-area: 3 / 1 / 4 / 1;
+}
+
+.container__grid-item3 {
+  grid-area: 3 / 3 / 4 / 4;
+}
+
+.inner {
+  width: 75%;
+  justify-self: center;
 }
 
 /*------------------------------------*\
@@ -34,6 +59,7 @@ p {
   right: 0;
   z-index: 3;
 }
+
 .navbar {
   background-color: transparent;
 }
@@ -59,13 +85,13 @@ p {
   height: 100%;
   margin: 0px auto;
 }
+
 .titulo {
   width: 100%;
   font-family: $font-family-sans-serif;
   font-size: 3.5rem;
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
+  @include Hcenter;
 }
 
 .portada__titulo2 {
@@ -73,8 +99,7 @@ p {
   font-family: $font-family-serif;
   margin: 0px auto;
   display: inline;
-  display: flex;
-  justify-content: center;
+  @include Hcenter;
 }
 
 .imagen__logo {
@@ -84,22 +109,23 @@ p {
 
 .portada__imagen {
   width: 100%;
+  background-color: $primary-color;
 }
+
 .imagen__letras {
   width: 100%;
 }
-.portada__imagen {
-  background-color: $primary-color;
-}
+
 .portada__teatro {
   width: 100%;
-  display: flex;
-  justify-content: center;
+  @include Hcenter;
   margin-top: 5%;
 }
-.imagen__teatro {
-  width: 30%;
+
+.imagen__teatroOlimpia {
+  width: 100%;
 }
+
 .portada__premisa {
   border-left: 6px solid $primary-color;
   padding-left: 3%;
@@ -108,33 +134,45 @@ p {
   margin-top: 5%;
 }
 
+/**
+*   Support para navegadores que no soporten display: grid
+*/
+
 @supports (display: grid) {
   .portada__main {
     height: 100vh;
   }
+
   .portada__container {
     display: grid;
     grid-template-columns: 40px 2% 40% 2% 42% 10%;
-    grid-template-rows: 50px 10px 33% 24% 23% 11%;
+    grid-template-rows: 50px 10px 33% 28% 23% 11%;
   }
+
   .portada__grid-item1 {
     grid-area: 1 / 1 / 1 / 1;
   }
+
   .portada__grid-item2 {
     grid-area: 3 / 1 / 7 / 1;
   }
+
   .portada__grid-item3 {
     grid-area: 1 / 3 / 7 / 3;
   }
+
   .portada__grid-item4 {
     grid-area: 5 / 3 / 7 / 3;
   }
+
   .portada__grid-item5 {
     grid-area: 4 / 5 / 4 / 7;
   }
+
   .portada__grid-item6 {
     grid-area: 6/ 6 / 6 /6;
   }
+
   .portada__imagen {
     background-color: $primary-color;
   }
@@ -149,9 +187,11 @@ p {
     display: initial;
     margin-top: 0px;
   }
+
   .imagen__teatro {
     width: 100%;
   }
+
   .imagen__logo {
     width: 100%;
     margin-top: 0px;
@@ -160,8 +200,7 @@ p {
   .portada__titulo2 {
     color: $secondary-color;
     font-family: $font-family-serif;
-    display: flex;
-    justify-content: center;
+    @include Hcenter;
     align-items: flex-end;
     width: 100%;
     font-size: 9rem;
@@ -186,48 +225,20 @@ p {
 }
 
 /*------------------------------------*\
-  #REPARTO #HISTORIA #VIDEOS & FOTOS
-\*------------------------------------*/
-
-.container__main {
-  width: 90%;
-  display: grid;
-  grid-template-columns: 40px 10px 1fr;
-  grid-template-rows: 50px 10px 1fr;
-}
-
-.container__grid-item1 {
-  grid-area: 1 / 1 / 1 / 1;
-}
-.container__grid-item2 {
-  grid-area: 3 / 1 / 4 / 1;
-}
-.container__grid-item3 {
-  grid-area: 3 / 3 / 4 / 4;
-}
-
-.inner {
-  width: 75%;
-  justify-self: center;
-}
-
-/*------------------------------------*\
   #REPARTO
 \*------------------------------------*/
 
 .reparto__inner {
   margin-top: 5%;
-  display: flex;
+  @include Hcenter;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
   column-gap: 10px;
   row-gap: 20px;
 }
 
 .card-body {
-  display: flex;
-  justify-content: center;
+  @include Hcenter;
 }
 
 /*------------------------------------*\
@@ -242,8 +253,7 @@ p {
 
 .historia__sipnopsis,
 .historia__tecnica {
-  text-align: justify;
-  align-self: center;
+  @include Hcenter;
 }
 
 .historia__grid-item1 {
@@ -320,6 +330,7 @@ h4 {
   font-family: $font-family-sans-serif;
   word-spacing: 100vw;
 }
+
 .historia__ficha {
   display: flex;
   align-items: center;
@@ -366,8 +377,7 @@ h4 {
 }
 
 .hitoria__button {
-  display: flex;
-  justify-content: center;
+  @include Hcenter;
   padding-top: 6%;
   padding-bottom: 6%;
 }
@@ -375,22 +385,21 @@ h4 {
 .historia__quote {
   font-family: $font-family-sans-serif;
   color: $secondary-color;
-
   background-color: $primary-color;
-  display: flex;
-  justify-content: center;
-
+  @include Hcenter;
   padding-top: 6%;
   padding-bottom: 6%;
 
   q {
     font-size: 3rem;
   }
+
   q:before {
     content: open-quote;
     font-weight: bold;
     font-size: 6rem;
   }
+
   q:after {
     content: close-quote;
     font-weight: bold;
@@ -435,8 +444,7 @@ h4 {
 .footer {
   background-color: $primary-color;
   margin-top: 15%;
-  display: flex;
-  justify-content: center;
+  @include Hcenter;
   color: $secondary-color;
 }
 
@@ -450,11 +458,26 @@ h4 {
 .footer__imagen {
   align-self: flex-end;
 }
+
 .footer__info {
   width: 40%;
   justify-self: center;
   padding-bottom: 3%;
 }
+
+.footer__rrss {
+  @include Hcenter;
+
+  a {
+    margin: 2%;
+    width: 10%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
 .footer__menu {
   ul {
     list-style: none;
@@ -479,22 +502,11 @@ h4 {
   width: 100%;
 }
 
-.footer__rrss {
-  display: flex;
-  justify-content: center;
-  a {
-    margin: 2%;
-    width: 10%;
-  }
-  img {
-    width: 100%;
-  }
-}
-
 @media (max-width: $MaxWidthM) {
   .portada__titulo2 {
     font-size: 9rem;
   }
+
   /*------------------------------------*\
   #NAV
 \*------------------------------------*/
@@ -506,6 +518,11 @@ h4 {
   /*------------------------------------*\
   #PORTADA
 \*------------------------------------*/
+
+  /**
+*   Support para navegadores que no soporten display: grid
+*/
+
   @supports (display: grid) {
     .portada__container {
       grid-template-columns: 40px 2% 50% 2% 32% 10%;
@@ -515,18 +532,23 @@ h4 {
     .portada__grid-item1 {
       grid-area: 2 / 1 / 2 / 1;
     }
+
     .portada__grid-item2 {
       grid-area: 4 / 1 / 8 / 1;
     }
+
     .portada__grid-item3 {
       grid-area: 2 / 3 / 8 / 3;
     }
+
     .portada__grid-item4 {
       grid-area: 5 / 3 / 8 / 3;
     }
+
     .portada__grid-item5 {
       grid-area: 5 / 5 / 5 / 7;
     }
+
     .portada__grid-item6 {
       grid-area: 7/ 6 / 7 /6;
     }
@@ -544,9 +566,11 @@ h4 {
   .container__grid-item1 {
     grid-area: 2 / 1 / 2 / 1;
   }
+
   .container__grid-item2 {
     grid-area: 4 / 1 / 5 / 1;
   }
+
   .container__grid-item3 {
     grid-area: 4 / 3 / 5 / 4;
   }
@@ -556,11 +580,10 @@ h4 {
 \*------------------------------------*/
 
   .reparto__lista {
+    @include Hcenter;
     margin-top: 5%;
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
     column-gap: 10px;
     row-gap: 20px;
   }
@@ -620,11 +643,13 @@ h4 {
       font-size: 2rem;
       text-align: center;
     }
+
     q:before {
       content: open-quote;
       font-weight: bold;
       font-size: 3rem;
     }
+
     q:after {
       content: close-quote;
       font-weight: bold;
@@ -664,6 +689,11 @@ h4 {
   /*------------------------------------*\
   #PORTADA
 \*------------------------------------*/
+
+  /**
+*   Support para navegadores que no soporten display: grid
+*/
+
   @supports (display: grid) {
     .portada__titulo2 {
       font-size: 6rem;
@@ -672,6 +702,7 @@ h4 {
   /*------------------------------------*\
   #REPARTO #HISTORIA #VIDEOS & FOTOS
 \*------------------------------------*/
+
   .inner {
     width: 100%;
   }
@@ -687,9 +718,11 @@ h4 {
   /*------------------------------------*\
   #FOOTER
 \*------------------------------------*/
+
   .footer {
     margin-top: 40%;
   }
+
   .footer__menu {
     ul {
       flex-direction: column;
@@ -703,6 +736,7 @@ h4 {
     box-sizing: border-box;
     font-size: 12px;
   }
+
   /*------------------------------------*\
   #PORTADA
 \*------------------------------------*/
@@ -713,6 +747,7 @@ h4 {
     right: 0;
     z-index: 3;
   }
+
   @supports (display: grid) {
     .portada__container {
       grid-template-columns: 40px 2% 1fr;
@@ -752,12 +787,15 @@ h4 {
 
     .portada__teatro {
       width: 100%;
-      display: flex;
-      justify-content: center;
+      @include Hcenter;
+    }
+
+    .imagen__teatroOlimpia {
+      width: 30%;
     }
 
     .imagen__teatro {
-      width: 30%;
+      width: 100%;
     }
   }
 
@@ -769,6 +807,7 @@ h4 {
       height: 250px;
     }
   }
+
   .foto__texto {
     line-height: 35px;
   }
