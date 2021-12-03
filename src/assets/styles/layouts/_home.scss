@@ -146,7 +146,7 @@ p {
   .portada__container {
     display: grid;
     grid-template-columns: 40px 2% 40% 2% 42% 10%;
-    grid-template-rows: 50px 10px 33% 28% 23% 11%;
+    grid-template-rows: 50px 10px 28% 28% 23% 1fr;
   }
 
   .portada__grid-item1 {
@@ -526,7 +526,7 @@ h4 {
   @supports (display: grid) {
     .portada__container {
       grid-template-columns: 40px 2% 50% 2% 32% 10%;
-      grid-template-rows: 40px 50px 10px 33% 20% 20% 10%;
+      grid-template-rows: 40px 50px 10px 31% 20% 20% 10%;
     }
 
     .portada__grid-item1 {
