@@ -5,7 +5,7 @@
     "at-rule-name-space-after": "always-single-line",
     "color-no-invalid-hex": true,
     "string-no-newline": true,
-    "selector-pseudo-class-no-unknown":true
-  
+    "selector-pseudo-class-no-unknown":true,
+    "declaration-block-semicolon-newline-after": "always"
   }
 }
